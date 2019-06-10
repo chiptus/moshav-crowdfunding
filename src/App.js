@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
+import React from 'react';
+import { useCampaigns } from './hooks/use-campaigns';
 import { CampaignsTable } from './components/campaigns-table';
+import { CampaignsList } from './components/campaigns-list';
 import { NewCampaignForm } from './components/new-campaign-form';
 import './App.css';
 
 function App() {
-  const [campaigns, setCampaigns] = useState([]);
-
-  useEffect(() => {
-    (async function loadData() {
-      const response = await axios.get('https://api.sheety.co/09f355f8-4bd2-4240-a82b-998c39bd3f40');
-      setCampaigns(response.data);
-    })();
-  }, []);
+  const campaigns = useCampaigns();
 
   return (
     <div className="App">
@@ -24,7 +17,7 @@ function App() {
           Please use these links to donate.
         </h3>
       </header>
-      <CampaignsTable campaigns={campaigns} />
+      <CampaignsList campaigns={campaigns} />
       <NewCampaignForm />
     </div>
   );
