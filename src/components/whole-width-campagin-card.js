@@ -1,10 +1,10 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-export function CampaignCard({ campaign, ...props }) {
+export function WholeWidthCampaignCard({ campaign, style, ...props }) {
   return (
-    <Card {...props}>
-      <Card.Img variant="top" src={campaign.imageUrl} style={{ maxHeight: '10em', objectFit: 'contain' }} />
+    <Card style={{ ...style, flexDirection: 'row' }} {...props}>
+      <Card.Img src={campaign.imageUrl} style={{ width: '20em' }} />
       <Card.Body>
         <Card.Title>
           <a href={campaign.url}>{campaign.title}</a>
