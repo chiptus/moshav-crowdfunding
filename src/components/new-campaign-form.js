@@ -36,6 +36,7 @@ export function NewCampaignForm() {
       style={{ width: '40%', margin: '1em auto' }}
       action="mailto:chiptus@gmail.com"
       method="POST"
+      id="submit"
       onSubmit={submit}>
       <header>
         <h3>Submit a campaign</h3>

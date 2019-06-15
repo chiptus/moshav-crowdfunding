@@ -10,7 +10,7 @@ export function CampaignsList({ campaigns }) {
 
   const [first, ...rest] = campaigns;
   return (
-    <div className="campaigns-list">
+    <div id="campaigns" className="campaigns-list">
       <WholeWidthCampaignCard campaign={first} style={{ marginBottom: '5em' }} />
       <CardDeck>
         {rest.map(campaign => (

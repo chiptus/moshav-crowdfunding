@@ -15,7 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "netlify deploy --dir"
+    "deploy": "yarn build && netlify deploy --dir ./build",
+    "deploy-prod": "netlify deploy --dir ./build --prod"
   },
   "eslintConfig": {
     "extends": "react-app"
