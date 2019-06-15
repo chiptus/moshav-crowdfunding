@@ -7,7 +7,7 @@ export function useCampaigns() {
   useEffect(() => {
     (async function loadData() {
       const response = await axios.get('https://api.sheety.co/09f355f8-4bd2-4240-a82b-998c39bd3f40');
-      setCampaigns(response.data);
+      setCampaigns(response.data.sort((a, b) => a.amountCollected - b.amountCollected));
     })();
   }, []);
 
