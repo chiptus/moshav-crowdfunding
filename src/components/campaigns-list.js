@@ -1,7 +1,8 @@
 import React from 'react';
-import { CardDeck } from 'react-bootstrap';
 import { CampaignCard } from './campaign-card';
-import { WholeWidthCampaignCard } from './whole-width-campagin-card';
+import { FeaturedCampaign } from './FeaturedCampaign';
+
+import styles from './CampaignsList.module.css';
 
 export function CampaignsList({ campaigns }) {
   if (!campaigns.length) {
@@ -11,12 +12,12 @@ export function CampaignsList({ campaigns }) {
   const [first, ...rest] = campaigns;
   return (
     <div id="campaigns" className="campaigns-list">
-      <WholeWidthCampaignCard campaign={first} style={{ marginBottom: '5em' }} />
-      <CardDeck>
+      <FeaturedCampaign className={styles.featureCampaign} campaign={first} />
+      <div>
         {rest.map(campaign => (
           <CampaignCard style={{ width: '30%', flex: 'initial' }} key={campaign.url} campaign={campaign} />
         ))}
-      </CardDeck>
+      </div>
     </div>
   );
 }

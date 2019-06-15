@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Card } from 'react-bootstrap';
 
 const readMoreButtonStyle = {
   background: 'none',
@@ -11,13 +10,13 @@ const readMoreButtonStyle = {
 export function CampaignCard({ campaign, ...props }) {
   const [isCollapsed, description, toggleCollapsed] = useCollapsedText(campaign.description || '');
   return (
-    <Card {...props}>
-      <Card.Img variant="top" src={campaign.imageUrl} style={{ maxHeight: '10em', objectFit: 'contain' }} />
-      <Card.Body>
-        <Card.Title>
+    <div {...props}>
+      <img alt={campaign.title} src={campaign.imageUrl} style={{ maxHeight: '10em', objectFit: 'contain' }} />
+      <div>
+        <div>
           <a href={campaign.url}>{campaign.title}</a>
-        </Card.Title>
-        <Card.Text>
+        </div>
+        <div>
           {isCollapsed && description.short ? (
             <span className="short-text">
               {description.short}...
@@ -28,9 +27,9 @@ export function CampaignCard({ campaign, ...props }) {
           ) : (
             <span className="full-text">{description.full}</span>
           )}
-        </Card.Text>
-      </Card.Body>
-    </Card>
+        </div>
+      </div>
+    </div>
   );
 }
 

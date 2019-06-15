@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Form, Button } from 'react-bootstrap';
 
 export function NewCampaignForm() {
   const [url, setUrl] = useState('');
@@ -32,7 +31,7 @@ export function NewCampaignForm() {
     };
   }
   return (
-    <Form
+    <form
       style={{ width: '40%', margin: '1em auto' }}
       action="mailto:chiptus@gmail.com"
       method="POST"
@@ -42,42 +41,50 @@ export function NewCampaignForm() {
         <h3>Submit a campaign</h3>
         <p>If there is a link to campaign we're missing, please submit it here </p>
       </header>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Your Email address</Form.Label>
-        <Form.Control
+      <div className="form-group" controlId="formBasicEmail">
+        <label>Your Email address</label>
+        <input
+          class="form-control"
           name="email"
           type="email"
           placeholder="Enter email"
           value={email}
           onChange={formSetter(setEmail)}
         />
-        <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
-      </Form.Group>
+        <div className="form-text text-muted">We'll never share your email with anyone else.</div>
+      </div>
 
-      <Form.Group controlId="formBasicCampaignUrl">
-        <Form.Label>Campaign URL</Form.Label>
-        <Form.Control name="url" placeholder="Enter url" value={url} onChange={formSetter(setUrl)} />
-      </Form.Group>
+      <div className="form-group" controlId="formBasicCampaignUrl">
+        <label>Campaign URL</label>
+        <input class="form-control" name="url" placeholder="Enter url" value={url} onChange={formSetter(setUrl)} />
+      </div>
 
-      <Form.Group controlId="formBasicTitle">
-        <Form.Label>Title</Form.Label>
-        <Form.Control name="title" placeholder="Enter title" value={title} onChange={formSetter(setTitle)} />
-      </Form.Group>
+      <div className="form-group" controlId="formBasicTitle">
+        <label>Title</label>
+        <input
+          class="form-control"
+          name="title"
+          placeholder="Enter title"
+          value={title}
+          onChange={formSetter(setTitle)}
+        />
+      </div>
 
-      <Form.Group controlId="formBasicDescription">
-        <Form.Label>Description</Form.Label>
-        <Form.Control
+      <div className="form-group" controlId="formBasicDescription">
+        <label>Description</label>
+        <input
+          class="form-control"
           name="description"
           as="textarea"
           placeholder=""
           value={description}
           onChange={formSetter(setDescription)}
         />
-      </Form.Group>
+      </div>
 
-      <Button variant="primary" type="submit">
+      <button variant="primary" type="submit">
         Submit
-      </Button>
-    </Form>
+      </button>
+    </form>
   );
 }
