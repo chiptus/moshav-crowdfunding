@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCampaigns } from './hooks/use-campaigns';
-import { CampaignsTable } from './components/campaigns-table';
+// import { CampaignsTable } from './components/campaigns-table';
 import { CampaignsList } from './components/campaigns-list';
 import { NewCampaignForm } from './components/new-campaign-form';
 import './App.css';
