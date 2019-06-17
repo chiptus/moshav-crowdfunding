@@ -1,0 +1,56 @@
+.featuredCampaign {
+  height: 80vh;
+  width: 100%;
+
+  background-size: cover;
+  background-blend-mode: saturation;
+
+  color: white;
+
+  padding: 3em 5em;
+}
+
+.cardTitle {
+  font-size: 3em;
+  font-weight: 900;
+
+  width: 40%;
+  text-transform: uppercase;
+}
+
+.cardTitle a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cardBody {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.campaignDescription {
+  width: 40%;
+  margin-top: 1em;
+  font-size: 1.5em;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.donationLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donateButton {
+  margin-top: auto;
+  font-size: 2em;
+  text-decoration: none;
+  color: white;
+  background: blueviolet;
+  padding: 0.5em;
+  border-radius: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}

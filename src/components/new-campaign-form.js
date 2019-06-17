@@ -41,28 +41,37 @@ export function NewCampaignForm() {
         <h3>Submit a campaign</h3>
         <p>If there is a link to campaign we're missing, please submit it here </p>
       </header>
-      <div className="form-group" controlId="formBasicEmail">
-        <label>Your Email address</label>
+      <div className="form-group">
+        <label htmlFor="formBasicEmail">Your Email address</label>
         <input
-          class="form-control"
+          className="form-control"
           name="email"
           type="email"
           placeholder="Enter email"
           value={email}
+          id="formBasicEmail"
           onChange={formSetter(setEmail)}
         />
         <div className="form-text text-muted">We'll never share your email with anyone else.</div>
       </div>
 
-      <div className="form-group" controlId="formBasicCampaignUrl">
-        <label>Campaign URL</label>
-        <input class="form-control" name="url" placeholder="Enter url" value={url} onChange={formSetter(setUrl)} />
+      <div className="form-group">
+        <label htmlFor="formBasicCampaignUrl">Campaign URL</label>
+        <input
+          id="formBasicCampaignUrl"
+          className="form-control"
+          name="url"
+          placeholder="Enter url"
+          value={url}
+          onChange={formSetter(setUrl)}
+        />
       </div>
 
-      <div className="form-group" controlId="formBasicTitle">
-        <label>Title</label>
+      <div className="form-group">
+        <label htmlFor="formBasicTitle">Title</label>
         <input
-          class="form-control"
+          id="formBasicTitle"
+          className="form-control"
           name="title"
           placeholder="Enter title"
           value={title}
@@ -70,10 +79,11 @@ export function NewCampaignForm() {
         />
       </div>
 
-      <div className="form-group" controlId="formBasicDescription">
-        <label>Description</label>
+      <div className="form-group">
+        <label htmlFor="formBasicDescription">Description</label>
         <input
-          class="form-control"
+          id="formBasicDescription"
+          className="form-control"
           name="description"
           as="textarea"
           placeholder=""

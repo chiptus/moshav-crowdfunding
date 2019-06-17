@@ -1,2 +1,12 @@
-.featured-campaign {
+.featuredCampaign {
+  width: 100%;
+}
+
+.campaignCard {
+  width: 50%;
+}
+
+.campaignsList {
+  display: flex;
+  flex-wrap: wrap;
 }
