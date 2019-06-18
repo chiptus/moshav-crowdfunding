@@ -73,3 +73,9 @@ textarea.formControl {
 textarea.formControl:focus {
   outline: none;
 }
+
+.submitButton {
+  height: 1.5em;
+  width: 8em;
+  margin-top: 2em;
+}

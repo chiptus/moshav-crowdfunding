@@ -1,0 +1,11 @@
+.button {
+  text-decoration: none;
+  color: white;
+  background: #0fb2a6;
+  border-radius: 20px;
+  font: inherit;
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: 0;
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import styles from './new-campaign-form.module.css';
 import { NotebookTextarea } from './NotebookTextarea';
+import { Button } from './button';
 
 export function NewCampaignForm() {
   const [url, setUrl] = useState('');
@@ -88,9 +89,9 @@ export function NewCampaignForm() {
         />
       </div>
 
-      <button variant="primary" type="submit">
+      <Button className={styles.submitButton} type="submit">
         Submit
-      </button>
+      </Button>
     </form>
   );
 }

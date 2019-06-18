@@ -37,6 +37,5 @@ function safeAmount(amount) {
   if (Number.isFinite(amount)) {
     return amount;
   }
-  console.log(amount);
   return +amount.replace(',', '');
 }
