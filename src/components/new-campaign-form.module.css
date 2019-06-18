@@ -1,0 +1,75 @@
+.form {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 3em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.subtitle {
+  font-size: 2.5em;
+  line-height: 1.5;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: center;
+  font-size: 2.5em;
+}
+
+.formGroup + * {
+  margin-top: 2em;
+}
+
+.formGroup label {
+  font-size: 0.6em;
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+.formControl {
+  width: 100%;
+  border: 0;
+  border-bottom: solid 1px;
+  text-align: center;
+  font: inherit;
+  font-weight: 700;
+  padding-bottom: 0.25em;
+}
+
+.formControl::placeholder {
+  color: #dbdbdb;
+}
+
+textarea.formControl {
+  --line-height: 1.5em;
+  display: block;
+  overflow: hidden;
+  line-height: var(--line-height);
+  background-image: linear-gradient(to bottom, transparent, transparent calc(var(--line-height) - 1px), black 0);
+  background-size: 100% var(--line-height);
+  background-repeat: repeat-y;
+  background-color: transparent;
+  border: none;
+  resize: none;
+}
+
+textarea.formControl:focus {
+  outline: none;
+}

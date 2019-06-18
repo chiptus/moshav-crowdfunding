@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import styles from './new-campaign-form.module.css';
+import { NotebookTextarea } from './NotebookTextarea';
 
 export function NewCampaignForm() {
   const [url, setUrl] = useState('');
@@ -30,62 +32,56 @@ export function NewCampaignForm() {
       setter(value);
     };
   }
+
   return (
-    <form
-      style={{ width: '40%', margin: '1em auto' }}
-      action="mailto:chiptus@gmail.com"
-      method="POST"
-      id="submit"
-      onSubmit={submit}>
-      <header>
-        <h3>Submit a campaign</h3>
-        <p>If there is a link to campaign we're missing, please submit it here </p>
+    <form className={styles.form} action="mailto:chiptus@gmail.com" method="POST" id="submit" onSubmit={submit}>
+      <header className={styles.header}>
+        <h3 className={styles.title}>+ Submit a campaign</h3>
+        <p className={styles.subtitle}>If there is a link to campaign we're missing, please submit it here </p>
       </header>
-      <div className="form-group">
-        <label htmlFor="formBasicEmail">Your Email address</label>
+      <div className={styles.formGroup}>
+        <label htmlFor="formBasicEmail">Your Email Address</label>
         <input
-          className="form-control"
+          className={styles.formControl}
           name="email"
           type="email"
-          placeholder="Enter email"
+          placeholder="example@email.com"
           value={email}
           id="formBasicEmail"
           onChange={formSetter(setEmail)}
         />
-        <div className="form-text text-muted">We'll never share your email with anyone else.</div>
       </div>
 
-      <div className="form-group">
+      <div className={styles.formGroup}>
         <label htmlFor="formBasicCampaignUrl">Campaign URL</label>
         <input
           id="formBasicCampaignUrl"
-          className="form-control"
+          className={styles.formControl}
           name="url"
-          placeholder="Enter url"
+          placeholder="www.campaign-url.com"
           value={url}
           onChange={formSetter(setUrl)}
         />
       </div>
 
-      <div className="form-group">
+      <div className={styles.formGroup}>
         <label htmlFor="formBasicTitle">Title</label>
         <input
           id="formBasicTitle"
-          className="form-control"
+          className={styles.formControl}
           name="title"
-          placeholder="Enter title"
+          placeholder="help the moshav"
           value={title}
           onChange={formSetter(setTitle)}
         />
       </div>
 
-      <div className="form-group">
+      <div className={styles.formGroup}>
         <label htmlFor="formBasicDescription">Description</label>
-        <input
+        <NotebookTextarea
           id="formBasicDescription"
-          className="form-control"
+          className={styles.formControl}
           name="description"
-          as="textarea"
           placeholder=""
           value={description}
           onChange={formSetter(setDescription)}
