@@ -5,9 +5,7 @@ import { CollapsedText } from './collapsed-text';
 export function FeaturedCampaign({ campaign, className }) {
   const donateButtonColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   return (
-    <div
-      className={`${styles.featuredCampaign} ${className}`}
-      style={{ backgroundImage: `linear-gradient(black, black), url(${campaign.imageUrl})` }}>
+    <div className={`${styles.featuredCampaign} ${className}`} style={{ backgroundImage: `url(${campaign.imageUrl})` }}>
       <div className={styles.cardBody}>
         <h1 className={styles.cardTitle}>
           <a href={campaign.url}>{campaign.title}</a>

@@ -1,13 +1,22 @@
 .featuredCampaign {
   height: 80vh;
   width: 100%;
-
+  position: relative;
   background-size: cover;
-  background-blend-mode: saturation;
 
   color: white;
 
   padding: 3em 5em;
+}
+
+.featuredCampaign:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .cardTitle {
@@ -27,6 +36,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  position: relative;
 }
 
 .campaignDescription {
