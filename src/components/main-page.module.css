@@ -36,7 +36,7 @@
 }
 
 .about {
-  width: 30%;
+  width: 40%;
   font-size: 2em;
   margin: auto;
   text-align: center;
@@ -74,5 +74,29 @@
   }
   100% {
     top: 0;
+  }
+}
+
+.videoBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url(http://res.cloudinary.com/chiptus/video/upload/v1560884047/moshav-header.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-device-width: 800px) {
+  .mainPage {
+    background: url(http://res.cloudinary.com/chiptus/video/upload/v1560884047/moshav-header.jpg) #000 no-repeat center
+      center fixed;
+  }
+  .videoBackground {
+    display: none;
   }
 }

@@ -5,6 +5,19 @@ import styles from './main-page.module.css';
 export function MainPage() {
   return (
     <div className={styles.mainPage}>
+      <video
+        playsInline
+        autoPlay
+        muted
+        loop
+        poster="http://res.cloudinary.com/chiptus/video/upload/v1560884047/moshav-header.jpg"
+        id="bgvid"
+        className={styles.videoBackground}>
+        <source
+          src="https://res.cloudinary.com/chiptus/video/upload/q_auto:eco/v1560884047/moshav-header.mp4"
+          type="video/mp4"
+        />
+      </video>
       <header className={styles.header}>
         <h1 className={styles.title}>Moshav Mevo Modi'im</h1>
         <div className={styles.headerButtons}>
