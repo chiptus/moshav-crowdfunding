@@ -51,6 +51,7 @@
   font: inherit;
   font-weight: 700;
   padding-bottom: 0.25em;
+  outline: none;
 }
 
 .formControl::placeholder {
