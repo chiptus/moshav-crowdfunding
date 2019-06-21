@@ -1,4 +1,4 @@
-/* @import '~bootstrap/dist/css/bootstrap.css'; */
-
 .App {
+  --header-height: 3em;
+  margin-top: var(--header-height);
 }
