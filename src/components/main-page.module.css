@@ -61,14 +61,17 @@
 }
 
 .arrowDown {
-  position: relative;
   font-size: 0.5em;
   width: 1.5em;
   height: 1.5em;
   border-width: 0.05em 0.05em 0 0;
   border-style: solid;
   transform: scaleX(3) rotate(135deg);
-  animation: jump 1s infinite;
+  transition: transform 1s;
+}
+
+.arrowDown:hover {
+  transform: scale(3.5, 1.5) rotate(135deg);
 }
 
 @keyframes jump {
