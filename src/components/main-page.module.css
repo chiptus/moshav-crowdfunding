@@ -89,6 +89,7 @@
   transform: translateX(-50%) translateY(-50%);
   background: url(http://res.cloudinary.com/chiptus/video/upload/v1560884047/moshav-header.jpg) no-repeat;
   background-size: cover;
+  filter: grayscale(1);
 }
 
 @media screen and (max-device-width: 800px) {
