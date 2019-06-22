@@ -8,6 +8,7 @@
   color: white;
 
   padding: 3em 5em;
+  margin: 0.5em;
 }
 
 .featuredCampaign:before {
@@ -21,10 +22,10 @@
 }
 
 .cardTitle {
-  font-size: 3em;
+  font-size: 2.2em;
   font-weight: 900;
 
-  width: 40%;
+  width: 70%;
   text-transform: uppercase;
 }
 
@@ -42,9 +43,9 @@
 }
 
 .campaignDescription {
-  width: 40%;
+  width: 70%;
   margin-top: 1em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   overflow-x: auto;
   flex: 1;
 }
@@ -56,13 +57,66 @@
 }
 
 .donateButton {
+  padding: 0.7em;
   margin-top: auto;
-  font-size: 2em;
+  font-size: 1.5em;
+  white-space: nowrap;
   text-decoration: none;
   color: white;
   background: blueviolet;
   padding: 0.5em;
-  border-radius: 20px;
   font-weight: 800;
   text-transform: uppercase;
+
+  border-radius: 10px;
+}
+
+.amountCollected {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.amountCollected label {
+  font-weight: lighter;
+}
+
+.featuredCampaign:nth-child(4n):before {
+  background: #420000;
+  opacity: 0.6;
+  /*const colors = ['#420000', '1b470c', '0f0f82', 'b26c10'];*/
+}
+
+.featuredCampaign:nth-child(4n + 1):before {
+  background: #1b470c;
+  opacity: 0.6;
+  /*const colors = ['#420000', '1b470c', '0f0f82', 'b26c10'];*/
+}
+
+.featuredCampaign:nth-child(4n + 2):before {
+  background: #0f0f82;
+  opacity: 0.6;
+  /*const colors = ['#420000', '1b470c', '0f0f82', 'b26c10'];*/
+}
+
+.featuredCampaign:nth-child(4n + 3):before {
+  background: #b26c10;
+  opacity: 0.6;
+  /*const colors = ['#420000', '1b470c', '0f0f82', 'b26c10'];*/
+}
+
+.featuredCampaign:first-child:before {
+  background: black;
+  opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+  .featuredCampaign {
+    height: 40vh;
+    padding: 2.5em;
+  }
+
+  .cardTitle,
+  .campaignDescription {
+    width: auto;
+  }
 }

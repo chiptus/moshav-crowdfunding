@@ -6,13 +6,14 @@
 }
 
 .about {
-  width: 40%;
-  font-size: 2em;
+  width: 30em;
+
+  font-size: 1.5em;
   margin: auto;
   text-align: center;
   background: rgb(0, 0, 0, 0.6);
   color: white;
-  padding: 1em;
+  padding: 2em;
 }
 
 .about a {
@@ -25,12 +26,14 @@
 }
 
 .arrowDown {
+  margin-top: 2em;
   font-size: 0.5em;
+
   width: 1.5em;
   height: 1.5em;
   border-width: 0.05em 0.05em 0 0;
   border-style: solid;
-  transform: scaleX(3) rotate(135deg);
+  transform: scaleX(2) rotate(135deg);
   transition: transform 1s;
 }
 
@@ -62,15 +65,25 @@
   transform: translateX(-50%) translateY(-50%);
   background: url(http://res.cloudinary.com/chiptus/video/upload/v1560884047/moshav-header.jpg) no-repeat;
   background-size: cover;
-  filter: grayscale(1);
 }
 
-@media screen and (max-device-width: 800px) {
+@media (max-width: 767px) {
   .mainPage {
     background: url(http://res.cloudinary.com/chiptus/video/upload/v1560884047/moshav-header.jpg) #000 no-repeat center
       center fixed;
   }
   .videoBackground {
     display: none;
+  }
+
+  .about {
+    width: 16em;
+    font-size: 1.7em;
+  }
+
+  .arrowDown {
+    transition: none;
+    position: relative;
+    animation: jump 1s infinite;
   }
 }

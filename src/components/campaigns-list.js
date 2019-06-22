@@ -9,6 +9,7 @@ export function CampaignsList({ campaigns }) {
   }
 
   const [first, ...rest] = campaigns;
+
   return (
     <div id="campaigns" className={styles.campaignsList}>
       <FeaturedCampaign className={styles.featuredCampaign} campaign={first} />

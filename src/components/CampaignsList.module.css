@@ -3,10 +3,17 @@
 }
 
 .campaignCard {
-  width: 50%;
+  width: calc(50% - 1em);
 }
 
 .campaignsList {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .campaignCard {
+    width: calc(100% - 1em);
+  }
 }

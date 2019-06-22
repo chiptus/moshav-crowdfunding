@@ -16,7 +16,7 @@ export function FeaturedCampaign({ campaign, className }) {
             <div className={styles.amountCollected}>
               {campaign.amountCollected} {campaign.currency}
             </div>
-            <div className={styles.amountCollectedText}>Amount Collected</div>
+            <label>Amount Collected</label>
           </div>
           <a
             href={campaign.url}

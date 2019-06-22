@@ -5,8 +5,9 @@ const readMoreButtonStyle = {
   background: 'none',
   border: 'none',
   color: 'lightblue',
-  marginLeft: '0.5em',
   fontSize: '1em',
+  display: 'block',
+  padding: 0,
 };
 
 export function CollapsedText({ text, className }) {
