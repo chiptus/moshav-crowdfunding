@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Heebo:400,800&display=swap&subset=hebrew');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
