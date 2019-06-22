@@ -9,10 +9,10 @@ export function Header() {
         {/* <a href="/about" className={styles.aboutButton}>
             ABOUT
           </a> */}
-        <button className={styles.shareButton}>
+        {/* <button className={styles.shareButton}>
           <span className={styles.shareButtonIcon} />
           Share
-        </button>
+        </button> */}
         <a href="#submit" className={styles.submitButton}>
           + SUBMIT A CAMPAIGN
         </a>
