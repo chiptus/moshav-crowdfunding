@@ -109,6 +109,15 @@
   opacity: 0.6;
 }
 
+.readMoreButton {
+  background: none;
+  border: none;
+  font-size: 1em;
+  display: block;
+  padding: 0;
+  color: lightblue;
+}
+
 @media (max-width: 767px) {
   .featuredCampaign {
     height: 40vh;
