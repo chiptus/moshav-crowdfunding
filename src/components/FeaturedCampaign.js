@@ -3,7 +3,7 @@ import styles from './FeaturedCampaign.module.css';
 
 export function FeaturedCampaign({ campaign, className }) {
   const donateButtonColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  const shortText = getShortText(campaign.description || '');
+  // const shortText = getShortText(campaign.description || '');
   return (
     <div className={`${styles.featuredCampaign} ${className}`} style={{ backgroundImage: `url(${campaign.imageUrl})` }}>
       <div className={styles.cardBody}>
@@ -12,12 +12,14 @@ export function FeaturedCampaign({ campaign, className }) {
             {campaign.title}
           </LinkToCampaign>
         </h1>
-        <span className={styles.campaignDescription}>
-          {shortText}...
-          <LinkToCampaign className={styles.readMoreButton} url={campaign.url}>
-            Read More
-          </LinkToCampaign>
-        </span>
+        {campaign.description && (
+          <span className={styles.campaignDescription}>
+            <div className={styles.campaignDescriptionText}>{campaign.description}</div>
+            <LinkToCampaign className={styles.readMoreButton} url={campaign.url}>
+              Read More
+            </LinkToCampaign>
+          </span>
+        )}
         <div className={styles.donationLine}>
           <div className={styles.amountCollectedWrapper}>
             <div className={styles.amountCollected}>

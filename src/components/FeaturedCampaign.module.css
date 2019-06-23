@@ -118,6 +118,17 @@
   color: lightblue;
 }
 
+.campaignDescriptionText {
+  overflow: auto;
+  display: -webkit-box;
+  height: 4em;
+  -webkit-line-clamp: 3;
+  -moz-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (max-width: 767px) {
   .featuredCampaign {
     height: 40vh;

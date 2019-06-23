@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './header.module.css';
-
+// import { ShareButton } from './share-button';
 export function Header() {
   return (
     <header className={styles.header}>
@@ -9,10 +9,7 @@ export function Header() {
         {/* <a href="/about" className={styles.aboutButton}>
             ABOUT
           </a> */}
-        {/* <button className={styles.shareButton}>
-          <span className={styles.shareButtonIcon} />
-          Share
-        </button> */}
+        {/* <ShareButton /> */}
         <a href="#submit" className={styles.submitButton}>
           + SUBMIT A CAMPAIGN
         </a>
