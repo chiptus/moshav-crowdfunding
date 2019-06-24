@@ -1,9 +1,15 @@
 {
   "short_name": "Moshav donations",
   "name": "Moshav donations",
-  "icons": [],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/ico"
+    }
+  ]
 }
