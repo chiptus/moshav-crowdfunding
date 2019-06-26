@@ -3,7 +3,6 @@ import styles from './FeaturedCampaign.module.css';
 
 export function FeaturedCampaign({ campaign, className }) {
   const donateButtonColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  // const shortText = getShortText(campaign.description || '');
   return (
     <div className={`${styles.featuredCampaign} ${className}`} style={{ backgroundImage: `url(${campaign.imageUrl})` }}>
       <div className={styles.cardBody}>
@@ -37,14 +36,6 @@ export function FeaturedCampaign({ campaign, className }) {
       </div>
     </div>
   );
-}
-
-function getShortText(text, maxLength = 200) {
-  let short = text.substring(0, maxLength);
-  if (text[maxLength + 1] !== ' ') {
-    short = short.substring(0, short.lastIndexOf(' '));
-  }
-  return short;
 }
 
 function LinkToCampaign({ url, children, ...props }) {

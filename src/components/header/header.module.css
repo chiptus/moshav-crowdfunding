@@ -37,19 +37,8 @@
   color: #fbb03b;
 }
 
-.headerButtons * + * {
+.headerButtons > * + * {
   margin-left: 1em;
-}
-
-.shareButton {
-  margin: 0;
-  padding: 0;
-  background: none;
-  border: 0;
-}
-
-.shareButtonIcon {
-  content: '&#9829';
 }
 
 @media (max-width: 767px) {
