@@ -21,7 +21,7 @@
   },
   "resolutions": {
     "lodash": ">=4.17.12",
-    "handlebars": "4.4.5"
+    "handlebars": ">= 4.5.3"
   },
   "browserslist": {
     "production": [
